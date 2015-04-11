@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule ^\.htaccess$ - [F]
+
+RewriteCond %{REQUEST_URI} =""
+RewriteRule ^.*$ /WebDeploy/index.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/frontend/.*$
+RewriteRule ^(.*)$ /frontend/$1
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^public/.*$ /frontend/index.php [NC,L]
