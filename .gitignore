@@ -55,3 +55,12 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Source maps
+*.map
+
+# Sass cache
+.sass-cache/
+
+# WebStorm files
+.idea/

@@ -1,0 +1,30 @@
+@import 'util'
+@import 'header'
+@import 'posts'
+@import 'omni-player'
+
+@font-face
+  font-family: 'UniversLTStd47LightCondensed'
+  src: url("../fonts/universltstd-lightcn-webfont.svg")
+
+$font-stack: 'UniversLTStd47LightCondensed', Helvetica, Arial, sans-serif
+
+body
+  font-family: $font-stack
+  height: 100%
+  +opacity-transition(.25s)
+
+.default-bg
+  background: url('../imgs/gilmore-bg.jpg') 50% 50%
+
+.animated-bg
+  background: url('http://49.media.tumblr.com/4100b1b8a89c0b90e97e9e6af224280e/tumblr_o3cgxqmL1n1uojhbvo8_500.gif')
+
+.row-centered
+  text-align: center
+
+.col-centered
+  display: inline-block
+  float: none
+  text-align: center
+  margin-right: -4px

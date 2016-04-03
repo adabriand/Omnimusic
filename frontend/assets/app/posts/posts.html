@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="posts-container col-sm-12" ng-class="postsCollapsed ? 'posts-container-collapsed' : 'posts-container-uncollapsed'">
+            <div class="post" ng-repeat="post in postsData" ng-mouseenter="postHover = true"
+                 ng-mouseleave="postHover = false">
+                <div class="artwork" style="background-image: url('assets/imgs/covers/{{ post.artworkFileName }}');">
+                    <div class="player-control" ng-click="playPost(post)"
+                         ng-class="postHover ? 'post-hover' : ''">
+                        <span class="glyphicon glyphicon-play" ng-show="!isThisPostPlaying(post)"></span>
+                        <span class="glyphicon glyphicon-pause" ng-show="isThisPostPlaying(post)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-2 col-sm-offset-5 col-centered">
+                <div class="posts-control" ng-click="postsCollapsed = !postsCollapsed">
+                    <span class="glyphicon glyphicon-chevron-up" ng-show="!postsCollapsed"></span>
+                    <span class="glyphicon glyphicon-chevron-down" ng-show="postsCollapsed"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

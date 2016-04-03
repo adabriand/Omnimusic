@@ -1,0 +1,140 @@
+// _omni-player.sass
+@import 'util'
+
+omni-player
+  position: fixed
+  bottom: 0px
+  left: 0px
+  height: 70px
+  width: 100%
+  color: #ffffff
+  font-size: 12px
+  cursor: default
+  line-height: normal
+  background-color: rgba(25,33,47, 0.98)
+  .player-controls
+    margin-top: 10px
+    position: relative
+    height: 50px
+    padding-left: 193px
+    padding-right: 75px
+    .player-controls-left
+      position: absolute
+      left: 0px
+      width: 193px
+      padding: 5px 0px
+      .artwork
+        float: left
+        margin: -5px 13px 0px 0px
+        img
+          width: 48px
+          height: 48px
+      .player-button
+        float: left
+        min-width: 33px
+        min-height: 36px
+        margin-right: 2px
+        font-size: 26px
+        padding-top: 4px
+        margin-top: 4px
+        cursor: pointer
+      .player-button:hover
+        color: #9C9B9B
+    .player-progress-bar
+      width: 100%
+      height: 100%
+      position: relative
+      +opacity(.99)
+      background: rgba(255, 255, 255, 0.2)
+      border-radius: 30px
+      padding: 8px 20px
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2)
+      overflow: hidden
+      .player-progress-bar-meter
+        position: absolute
+        left: 0
+        top: 0
+        width: 0
+        background: rgba(200, 200, 200, 0.15)
+        height: 100%
+        transition: width 1s linear
+        -webkit-opacity: .99
+        border-radius: 30px 0 0 30px
+      .track-details-container
+        width: 100%
+        .title-container
+          overflow: hidden
+          .title-artist
+            white-space: nowrap
+            color: #eee
+            font-size: 14px
+            line-height: 17px
+            .title
+              font-weight: bold
+              margin-right: 5px
+        .track-metadata
+          color: #999
+          overflow: hidden
+          .album
+            white-space: nowrap
+            margin: 0 20px 20px 0
+            float: left
+            font-size: 13px
+            color: #ccc
+            font-style: italic
+            .label
+              display: inline
+              padding-left: 0px
+            .detail
+              color: #eee
+              padding-right: 10px
+    .player-controls-right
+      position: absolute
+      right: 0
+      top: 0
+      .volume-controls-container
+        .player-volume
+          float: left
+          width: 49px
+          height: 49px
+          text-align: left
+          text-indent: 6px
+          position: relative
+          font-size: 30px
+          cursor: pointer
+          padding: 12px 0
+          background-position: 14px 14px
+          z-index: 2
+        .volume-container
+          position: absolute
+          bottom: 0px
+          width: 49px
+          height: 50px
+          overflow: hidden
+          border-radius: 0 0 30px 30px
+          +opacity(0)
+          transition: opacity 0.1s linear, height 0.14s linear
+          background: rgba(70, 76, 87, 1)
+          .volume-range
+            position: absolute
+            width: 31px
+            height: 86px
+            bottom: 53px
+            left: 9px
+            top: auto
+            background: rgba(3, 3, 3, 0.5)
+            cursor: pointer
+            .volume-selector
+              position: absolute
+              width: 31px
+              height: auto
+              max-height: 100%
+              bottom: 0px
+              background-color: #ffffff
+        .volume-container.open
+          +opacity(1)
+          height: 150px
+
+
+
+

@@ -1,0 +1,67 @@
+// _posts.sass
+@import 'util'
+
+$posts-height: 450px
+$posts-padding-bottom: 30px
+
+posts
+  +noselect()
+  .post-control
+    position: relative
+    top: 38%
+    left: 38%
+    border: 5px solid #fff
+    background-color: rgba(0, 0, 0, 0.3)
+    color: #fff
+    border-radius: 50%
+    font-size: 45px
+    text-indent: 6px
+    padding: 20px
+    +opacity-transition(0.2s)
+  .posts-container-collapsed
+    height: 0px
+  .posts-container-uncollapsed
+    height: $posts-height
+  .posts-container
+    padding-top: 15px
+    white-space: nowrap
+    overflow: hidden
+    +resize-transition(0.8s)
+    .post
+      height: $posts-height - $posts-padding-bottom
+      width: $posts-height - $posts-padding-bottom
+      display: inline-block
+      margin-right: 15px
+      float: none
+      .artwork
+        height: $posts-height - $posts-padding-bottom
+        width: $posts-height - $posts-padding-bottom
+        position: relative
+        background-size: 100% 100%
+        +border-radius(30px)
+        .player-control
+          @extend .post-control
+          width: 100px
+          height: 100px
+          +opacity(0)
+        .player-control:hover
+          +opacity(1)
+        .post-hover
+          +opacity(0.8)
+  .glyphicon
+    float: left
+  .posts-control
+    @extend .post-control
+    top: 0%
+    left: 34%
+    width: 60px
+    height: 35px
+    font-size: 22px
+    text-indent: 15px
+    padding: 0px
+    border-radius: 20%
+    +opacity(0.8)
+  .posts-control:hover
+    +opacity(1)
+
+
