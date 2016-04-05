@@ -8,9 +8,6 @@ div.scrollingHotSpotLeft
 	min-width: 75px;
 	width: 10%;
 	height: 100%;
-	/* There is a big background image and it's used to solve some problems I experienced
-    in Internet Explorer 6. */
-	background-image: url(../images/big_transparent.gif);
 	background-repeat: repeat;
 	background-position: center center;
 	position: absolute;
@@ -23,7 +20,6 @@ div.scrollingHotSpotLeft
 /* Visible left hotspot */
 div.scrollingHotSpotLeftVisible
 {
-	background-image: url(../images/arrow_left.gif);				
 	background-color: #fff;
 	background-repeat: no-repeat;
 	opacity: 0.35; /* Standard CSS3 opacity setting */
@@ -38,7 +34,6 @@ div.scrollingHotSpotRight
 	min-width: 75px;
 	width: 10%;
 	height: 100%;
-	background-image: url(../images/big_transparent.gif);
 	background-repeat: repeat;
 	background-position: center center;
 	position: absolute;
@@ -50,7 +45,6 @@ div.scrollingHotSpotRight
 /* Visible right hotspot */
 div.scrollingHotSpotRightVisible
 {
-	background-image: url(../images/arrow_right.gif);
 	background-color: #fff;
 	background-repeat: no-repeat;
 	opacity: 0.35;

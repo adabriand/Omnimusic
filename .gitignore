@@ -64,3 +64,6 @@ target/
 
 # WebStorm files
 .idea/
+
+# NodeJS modules
+node_modules/

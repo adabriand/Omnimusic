@@ -82,6 +82,8 @@
                 })
 
                 function watchTimeUpdate() {
+                    if (typeof player === "undefined" ||
+                        typeof player.getCurrentTime === "undefined") return;
                     var currentTime = player.getCurrentTime();
                     var durationTime = player.getDuration();
                     scope.playProgress = (currentTime/durationTime)*100;
