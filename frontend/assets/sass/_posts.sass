@@ -17,6 +17,7 @@ posts
     font-size: 45px
     text-indent: 6px
     padding: 20px
+    cursor: pointer
     +opacity-transition(0.2s)
   .posts-container-collapsed
     height: 0px
@@ -50,7 +51,7 @@ posts
           +opacity(0.8)
   .glyphicon
     float: left
-  .posts-control
+  .collapse-control
     @extend .post-control
     top: 0%
     left: 34%
@@ -61,7 +62,7 @@ posts
     padding: 0px
     border-radius: 20%
     +opacity(0.8)
-  .posts-control:hover
+  .collapse-control:hover
     +opacity(1)
 
 

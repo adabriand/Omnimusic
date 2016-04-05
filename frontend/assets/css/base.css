@@ -20,7 +20,7 @@ posts {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  posts .post-control, posts .posts-container .post .artwork .player-control, posts .posts-control {
+  posts .post-control, posts .posts-container .post .artwork .player-control, posts .collapse-control {
     position: relative;
     top: 38%;
     left: 38%;
@@ -31,6 +31,7 @@ posts {
     font-size: 45px;
     text-indent: 6px;
     padding: 20px;
+    cursor: pointer;
     -webkit-transition: opacity 0.2s ease-out;
     -moz-transition: opacity 0.2s ease-out;
     -ms-transition: opacity 0.2s ease-out;
@@ -80,7 +81,7 @@ posts {
           opacity: 0.8; }
   posts .glyphicon {
     float: left; }
-  posts .posts-control {
+  posts .collapse-control {
     top: 0%;
     left: 34%;
     width: 60px;
@@ -92,7 +93,7 @@ posts {
     -moz-opacity: 0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8; }
-  posts .posts-control:hover {
+  posts .collapse-control:hover {
     -moz-opacity: 1;
     -khtml-opacity: 1;
     opacity: 1; }
