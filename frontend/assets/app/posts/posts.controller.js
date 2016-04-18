@@ -18,37 +18,62 @@
             { artworkFileName : 'jungle.jpg', artist : "Jungle",
                 title: "The Heat", album: "Jungle", year : "2014", youtubeId : 'Y4UckOGdZtI'}];
 
-        $scope.$watch('pausedPlayer', function(newValue) {
-            postsService.isSongPlaying = !newValue;
-        });
+        function postsIndexOf(post) {
+            if (typeof post == "undefined") {
+                return -1;
+            }
+            var arr = $scope.postsData;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].youtubeId === post.youtubeId) {
+                    return i;
+                }
+            }
+            return -1;
+        }
 
-        $scope.setCurrentPlaying = function(post) {
+        function postExists(post) {
+            return postsIndexOf(post) != -1;
+        }
+
+        function setCurrentPlaying(post) {
             $scope.currentPlaying = post;
             $scope.currentPlayingYoutubeId = post.youtubeId;
-            $scope.pausedPlayer = false;
+            setPausedPlayer(false);
         }
 
-        $scope.isThisPostPlaying = function(post) {
-            return $scope.currentPlaying === post && !$scope.pausedPlayer;
+        function setPausedPlayer(bool) {
+            $scope.pausedPlayer = bool;
+            postsService.isSongPlaying = !bool;
         }
 
+        $scope.setPostsData = function(postsData) {
+            $scope.postsData = postsData;
+        }
+        
         $scope.playPost = function(post) {
-            if ($scope.isThisPostPlaying(post)) {
-                $scope.pausedPlayer = true;
+            if (!postExists(post)) {
                 return;
             }
-            $scope.setCurrentPlaying(post);
+            if ($scope.isThisPostPlaying(post)) {
+                setPausedPlayer(true);
+                return;
+            }
+            setCurrentPlaying(post);
+        }
+        
+        $scope.isThisPostPlaying = function(post) {
+            return $scope.currentPlaying === post && !$scope.pausedPlayer;
         }
 
         $scope.playCurrentPlayingPost = function() {
             $scope.playPost($scope.currentPlaying);
         }
-        
+
         $scope.playEnded = function() {
             if (typeof $scope.currentPlaying === "undefined") {
                 return;
             }
-            var currentPostIndex = $scope.postsData.indexOf($scope.currentPlaying);
+            var currentPostIndex = postsIndexOf($scope.currentPlaying);
             if (currentPostIndex === -1) {
                 return;
             }
@@ -56,7 +81,7 @@
                     0 : currentPostIndex + 1;
             $scope.playPost($scope.postsData[currentPostIndex]);
         }
-        
+
         $scope.updateVolumeHeight = function (event) {
             var clickPosY = event.clientY - $(event.currentTarget).offset().top;
             var volumeBarHeight = $(event.currentTarget).height();
@@ -68,7 +93,7 @@
             var clickPosX = event.clientX - $(event.currentTarget).offset().left;
             var progressBarWidth = $(event.currentTarget).width();
             clickPosX = clickPosX < 0 ? 0 : clickPosX;
-            $scope.playProgress = (clickPosX / progressBarWidth) * 100
+            $scope.playProgress = (clickPosX / progressBarWidth) * 100;
             $scope.seekTo = true;
         }
     });

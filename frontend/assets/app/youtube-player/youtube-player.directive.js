@@ -70,7 +70,7 @@
                         return;
                     }
                     player.setVolume(newValue);
-                })
+                });
 
                 scope.$watch('seekTo', function(newValue, oldValue) {
                     if (newValue === oldValue || newValue === "false") {
@@ -79,7 +79,7 @@
                     var seekToValue = (scope.playProgress/100) * player.getDuration();
                     player.seekTo(seekToValue);
                     scope.seekTo = false;
-                })
+                });
 
                 function watchTimeUpdate() {
                     if (typeof player === "undefined" ||
