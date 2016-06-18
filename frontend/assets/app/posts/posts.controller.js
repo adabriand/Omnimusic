@@ -8,7 +8,6 @@
         $scope.volumeHeight = 100;
         $scope.playProgress = 0;
         $scope.seekTo = false;
-        
         $scope.postsData = [{ artworkFileName : 'karol-conka.jpg', artist : "Karol Conka",
             title: "Tombei (ft. Tropkillaz)", album: "Tombei (Single)", year : "2014", youtubeId : 'SdYXMyJEKZs'},
             { artworkFileName : 'andrew-bird.jpg', artist : "Andrew Bird",

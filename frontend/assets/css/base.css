@@ -237,6 +237,22 @@ omni-player {
         opacity: 1;
         height: 150px; }
 
+about {
+  color: #ffffff;
+  font-size: 22px;
+  text-align: justify; }
+  about .container {
+    background-color: rgba(43, 40, 41, 0.85);
+    border-radius: 25px;
+    margin-top: 20px;
+    width: 950px; }
+    about .container .col-sm-12 {
+      padding: 25px 35px; }
+      about .container .col-sm-12 a {
+        color: #33B745; }
+      about .container .col-sm-12 a:hover {
+        color: #11771D; }
+
 @font-face {
   font-family: "UniversLTStd47LightCondensed";
   src: url("../fonts/universltstd-lightcn-webfont.svg"); }

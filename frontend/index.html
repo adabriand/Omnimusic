@@ -28,6 +28,8 @@
     <script type="text/javascript" src="assets/app/youtube-player/youtube-player.module.js"></script>
     <script type="text/javascript" src="assets/app/youtube-player/youtube-player.service.js"></script>
     <script type="text/javascript" src="assets/app/youtube-player/youtube-player.directive.js"></script>
+    <script type="text/javascript" src="assets/app/about/about.module.js"></script>
+    <script type="text/javascript" src="assets/app/about/about.directive.js"></script>
     <script type="text/javascript" src="assets/app/omnimusic.module.js"></script>
     <script type="text/javascript" src="assets/app/omnimusic.controller.js"></script>
 </head>
@@ -35,11 +37,12 @@
 <body ng-app="omnimusic" ng-controller="omnimusicCtrl" ng-class="isSongPlaying() ? 'animated-bg' : 'default-bg'">
     <header></header>
     <div ng-controller="postsCtrl">
-        <posts></posts>
+        <posts ng-show="!hidePosts"></posts>
         <omni-player ng-show="currentPlaying"></omni-player>
         <youtube width="0" height="0" videoid="{{ currentPlayingYoutubeId }}" paused="{{ pausedPlayer }}"
                  ended="playEnded()" volume="{{ volumeHeight }}" play-progress="playProgress" seek-to="seekTo"
         ></youtube>
     </div>
+    <about ng-show="!hideAbout"></about>
 </body>
 </html>
