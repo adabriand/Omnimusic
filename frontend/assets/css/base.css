@@ -157,7 +157,7 @@ omni-player {
         background: rgba(200, 200, 200, 0.15);
         height: 100%;
         transition: width 1s linear;
-        -webkit-opacity: 0.99;
+        -webkit-opacity: .99;
         border-radius: 30px 0 0 30px; }
       omni-player .player-controls .player-progress-bar .track-details-container {
         width: 100%; }
@@ -254,8 +254,9 @@ about {
         color: #11771D; }
 
 @font-face {
-  font-family: "UniversLTStd47LightCondensed";
+  font-family: 'UniversLTStd47LightCondensed';
   src: url("../fonts/universltstd-lightcn-webfont.svg"); }
+
 body {
   font-family: "UniversLTStd47LightCondensed", Helvetica, Arial, sans-serif;
   height: 100%;
@@ -279,5 +280,3 @@ body {
   float: none;
   text-align: center;
   margin-right: -4px; }
-
-/*# sourceMappingURL=base.css.map */
