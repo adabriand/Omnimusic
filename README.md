@@ -14,5 +14,6 @@ To *run* the Omnimusic, you only need
 
 Installation
 ------------------------------
-* Run the web server: `node index.js`
+* Install the dependencies: `npm install`
+* Run the web server: `node index.js` or `gulp start`
 * If you want to change the default values for hostname `localhost` and port `3000`, you need to set up the environment variables - `HOST` and `PORT`.
