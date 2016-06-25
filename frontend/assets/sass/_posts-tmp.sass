@@ -2,46 +2,43 @@
 @import 'util'
 
 $posts-height: 300px
-$posts-padding-bottom: 30px
+$posts-margin-bottom: 30px
 
 posts
   +noselect()
-  .post-control-tmpl
+  .post-control
     position: relative
+    top: 38%
+    left: 38%
     border: 5px solid #fff
     background-color: rgba(0, 0, 0, 0.3)
     color: #fff
-    cursor: pointer
-  .post-control
-    @extend .post-control-tmpl
-    top: 32%
-    left: 32%
+    border-radius: 50%
     font-size: 45px
     text-indent: 6px
     padding: 20px
-    border-radius: 50%
+    cursor: pointer
     +opacity-transition(0.2s)
   .posts-container-collapsed
     height: 0px
-    margin-top: 0px
   .posts-container-uncollapsed
-    height: $posts-height
-    margin-top: 4%
+    height: $posts-height + $posts-margin-bottom
   .posts-container
     padding-top: 15px
     white-space: nowrap
     overflow: hidden
-    +resize-and-margin-transition(0.8s)
+    +resize-transition(0.8s)
     .post
-      height: $posts-height - $posts-padding-bottom
-      width: $posts-height - $posts-padding-bottom
+      margin-bottom: $posts-margin-bottom
       display: inline-block
+      width: $posts-height
       margin-right: 15px
       float: none
       .artwork
-        height: $posts-height - $posts-padding-bottom
-        width: $posts-height - $posts-padding-bottom
         position: relative
+        width: 100%
+        padding-bottom: 100%
+        height: 0
         background-size: 100% 100%
         +border-radius(30px)
         .player-control
@@ -55,18 +52,16 @@ posts
           +opacity(0.8)
   .glyphicon
     float: left
-  .collapse-control-container
-    margin: 0px auto
+  .collapse-control
+    @extend .post-control
+    top: 0%
+    left: 34%
     width: 60px
-    .collapse-control
-      @extend .post-control-tmpl
-      height: 35px
-      font-size: 22px
-      text-indent: 15px
-      padding: 0px
-      border-radius: 20%
-      +opacity(0.8)
+    height: 35px
+    font-size: 22px
+    text-indent: 15px
+    padding: 0px
+    border-radius: 20%
+    +opacity(0.8)
   .collapse-control:hover
     +opacity(1)
-
-

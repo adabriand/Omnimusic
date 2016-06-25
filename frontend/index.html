@@ -14,7 +14,7 @@
     <script type="text/javascript" src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.smoothdivscroll-1.3-min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.kinetic.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.kinetic.js"></script>
     <script type="text/javascript" src="assets/js/jquery.smoothTouchScroll.min.js"></script>
 
     <script type="text/javascript" src="assets/app/header/header.module.js"></script>
@@ -37,12 +37,12 @@
 <body ng-app="omnimusic" ng-controller="omnimusicCtrl" ng-class="isSongPlaying() ? 'animated-bg' : 'default-bg'">
     <header></header>
     <div ng-controller="postsCtrl">
-        <posts ng-show="!hidePosts"></posts>
+        <posts ng-show="showingPosts"></posts>
         <omni-player ng-show="currentPlaying"></omni-player>
         <youtube width="0" height="0" videoid="{{ currentPlayingYoutubeId }}" paused="{{ pausedPlayer }}"
                  ended="playEnded()" volume="{{ volumeHeight }}" play-progress="playProgress" seek-to="seekTo"
         ></youtube>
     </div>
-    <about ng-show="!hideAbout"></about>
+    <about ng-show="showingAbout"></about>
 </body>
 </html>

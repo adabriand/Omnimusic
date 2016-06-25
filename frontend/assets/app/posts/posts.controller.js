@@ -47,7 +47,7 @@
 
         $scope.setPostsData = function(postsData) {
             $scope.postsData = postsData;
-        }
+        };
         
         $scope.playPost = function(post) {
             if (!postExists(post)) {
@@ -58,15 +58,15 @@
                 return;
             }
             setCurrentPlaying(post);
-        }
+        };
         
         $scope.isThisPostPlaying = function(post) {
             return $scope.currentPlaying === post && !$scope.pausedPlayer;
-        }
+        };
 
         $scope.playCurrentPlayingPost = function() {
             $scope.playPost($scope.currentPlaying);
-        }
+        };
 
         $scope.playEnded = function() {
             if (typeof $scope.currentPlaying === "undefined") {
@@ -79,14 +79,14 @@
             currentPostIndex = currentPostIndex + 1 === $scope.postsData.length ?
                     0 : currentPostIndex + 1;
             $scope.playPost($scope.postsData[currentPostIndex]);
-        }
+        };
 
         $scope.updateVolumeHeight = function (event) {
             var clickPosY = event.clientY - $(event.currentTarget).offset().top;
             var volumeBarHeight = $(event.currentTarget).height();
             clickPosY = volumeBarHeight - clickPosY < 0 ? 0 : volumeBarHeight - clickPosY;
-            $scope.volumeHeight = (clickPosY / volumeBarHeight) * 100
-        }
+            $scope.volumeHeight = (clickPosY / volumeBarHeight) * 100;
+        };
 
         $scope.updatePlayProgress = function (event) {
             var clickPosX = event.clientX - $(event.currentTarget).offset().left;
@@ -94,6 +94,6 @@
             clickPosX = clickPosX < 0 ? 0 : clickPosX;
             $scope.playProgress = (clickPosX / progressBarWidth) * 100;
             $scope.seekTo = true;
-        }
+        };
     });
 }());

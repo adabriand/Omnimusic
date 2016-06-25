@@ -1,23 +1,26 @@
 // _omni-player.sass
 @import 'util'
 
+$omni-player-height: 70px
+
 omni-player
   position: fixed
   bottom: 0px
   left: 0px
-  height: 70px
+  height: $omni-player-height
   width: 100%
   color: #ffffff
   font-size: 12px
   cursor: default
   line-height: normal
-  background-color: rgba(25,33,47, 0.98)
+  background-color: rgb(25,33,47)
+  z-index: 9999
   .player-controls
     margin-top: 10px
     position: relative
     height: 50px
-    padding-left: 193px
-    padding-right: 75px
+    padding-left: 173px
+    padding-right: 53px
     .player-controls-left
       position: absolute
       left: 0px

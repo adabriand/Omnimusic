@@ -13,6 +13,6 @@
             onReady: function(callback) {
                 apiReady.then(callback);
             }
-        }
+        };
     });
 }());

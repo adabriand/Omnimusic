@@ -2,19 +2,19 @@
     'use strict';
 
     angular.module('omnimusic').controller('omnimusicCtrl', function($scope, postsService) {
-        $scope.hidePosts = false;
-        $scope.hideAbout = true;
+        $scope.showingPosts = true;
+        $scope.showingAbout = false;
 
         $scope.isSongPlaying = function() {
             return postsService.isSongPlaying;
-        }
+        };
         $scope.showAbout = function() {
-            $scope.hidePosts = true;
-            $scope.hideAbout = false;
-        }
+            $scope.showingPosts = false;
+            $scope.showingAbout = true;
+        };
         $scope.showPosts = function() {
-            $scope.hidePosts = false;
-            $scope.hideAbout = true;
-        }
+            $scope.showingPosts = true;
+            $scope.showingAbout = false;
+        };
     });
 }());

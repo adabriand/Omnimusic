@@ -6,7 +6,6 @@
         var testPostData;
         var nextTestPost;
         var $controller;
-        var $rootScope;
         var $scope;
 
         beforeEach(function () {
@@ -24,8 +23,7 @@
         });
 
         beforeEach(inject(function(_$rootScope_, _$controller_) {
-            $rootScope = _$rootScope_;
-            $scope = $rootScope.$new();
+            $scope = _$rootScope_.$new();
             $controller = _$controller_;
         }));
 

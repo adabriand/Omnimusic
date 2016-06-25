@@ -4,6 +4,6 @@
     angular.module('omnimusic.posts').service("postsService", function() {
         return {
             isSongPlaying : false
-        }
+        };
     });
 }());

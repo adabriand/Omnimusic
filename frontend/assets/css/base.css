@@ -1,103 +1,3 @@
-header {
-  color: #ffffff;
-  background-color: rgba(43, 40, 41, 0.75);
-  padding-bottom: 10px; }
-  header h1 a, header h1 a:hover, header h1 a:focus {
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0cm;
-    border-bottom: 2px solid #ffffff;
-    font-weight: bold;
-    text-decoration: none; }
-  header .social-icon {
-    width: 30px;
-    margin-right: 5px; }
-
-posts {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  posts .post-control, posts .posts-container .post .artwork .player-control, posts .collapse-control {
-    position: relative;
-    top: 38%;
-    left: 38%;
-    border: 5px solid #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border-radius: 50%;
-    font-size: 45px;
-    text-indent: 6px;
-    padding: 20px;
-    cursor: pointer;
-    -webkit-transition: opacity 0.2s ease-out;
-    -moz-transition: opacity 0.2s ease-out;
-    -ms-transition: opacity 0.2s ease-out;
-    -o-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out; }
-  posts .posts-container-collapsed {
-    height: 0px; }
-  posts .posts-container-uncollapsed {
-    height: 450px; }
-  posts .posts-container {
-    padding-top: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-transition: width 0.8s ease-out, height 0.8s ease-out;
-    -moz-transition: width 0.8s ease-out, height 0.8s ease-out;
-    -ms-transition: width 0.8s ease-out, height 0.8s ease-out;
-    -o-transition: width 0.8s ease-out, height 0.8s ease-out;
-    transition: width 0.8s ease-out, height 0.8s ease-out; }
-    posts .posts-container .post {
-      height: 420px;
-      width: 420px;
-      display: inline-block;
-      margin-right: 15px;
-      float: none; }
-      posts .posts-container .post .artwork {
-        height: 420px;
-        width: 420px;
-        position: relative;
-        background-size: 100% 100%;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -ms-border-radius: 30px;
-        border-radius: 30px; }
-        posts .posts-container .post .artwork .player-control {
-          width: 100px;
-          height: 100px;
-          -moz-opacity: 0;
-          -khtml-opacity: 0;
-          opacity: 0; }
-        posts .posts-container .post .artwork .player-control:hover {
-          -moz-opacity: 1;
-          -khtml-opacity: 1;
-          opacity: 1; }
-        posts .posts-container .post .artwork .post-hover {
-          -moz-opacity: 0.8;
-          -khtml-opacity: 0.8;
-          opacity: 0.8; }
-  posts .glyphicon {
-    float: left; }
-  posts .collapse-control {
-    top: 0%;
-    left: 34%;
-    width: 60px;
-    height: 35px;
-    font-size: 22px;
-    text-indent: 15px;
-    padding: 0px;
-    border-radius: 20%;
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8; }
-  posts .collapse-control:hover {
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1; }
-
 omni-player {
   position: fixed;
   bottom: 0px;
@@ -108,13 +8,14 @@ omni-player {
   font-size: 12px;
   cursor: default;
   line-height: normal;
-  background-color: rgba(25, 33, 47, 0.98); }
+  background-color: #19212f;
+  z-index: 9999; }
   omni-player .player-controls {
     margin-top: 10px;
     position: relative;
     height: 50px;
-    padding-left: 193px;
-    padding-right: 75px; }
+    padding-left: 173px;
+    padding-right: 53px; }
     omni-player .player-controls .player-controls-left {
       position: absolute;
       left: 0px;
@@ -157,7 +58,7 @@ omni-player {
         background: rgba(200, 200, 200, 0.15);
         height: 100%;
         transition: width 1s linear;
-        -webkit-opacity: .99;
+        -webkit-opacity: 0.99;
         border-radius: 30px 0 0 30px; }
       omni-player .player-controls .player-progress-bar .track-details-container {
         width: 100%; }
@@ -237,26 +138,131 @@ omni-player {
         opacity: 1;
         height: 150px; }
 
+header {
+  color: #ffffff;
+  background-color: rgba(43, 40, 41, 0.75);
+  padding-bottom: 10px; }
+  header .col-sm-2 {
+    padding-left: 0px; }
+  header .col-sm-5 {
+    padding: 0px; }
+  header h1 a, header h1 a:hover, header h1 a:focus {
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0cm;
+    border-bottom: 2px solid #ffffff;
+    font-weight: bold;
+    text-decoration: none; }
+  header .social-icon {
+    width: 30px;
+    margin-right: 5px; }
+
+posts {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  posts .post-control-tmpl, posts .post-control, posts .posts-container .post .artwork .player-control, posts .collapse-control-container .collapse-control {
+    position: relative;
+    border: 5px solid #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer; }
+  posts .post-control, posts .posts-container .post .artwork .player-control {
+    top: 32%;
+    left: 32%;
+    font-size: 45px;
+    text-indent: 6px;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
+  posts .posts-container-collapsed {
+    height: 0px;
+    margin-top: 0px; }
+  posts .posts-container-uncollapsed {
+    height: 300px;
+    margin-top: 4%; }
+  posts .posts-container {
+    padding-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: margin 0.8s ease-out, width 0.8s ease-out, height 0.8s ease-out;
+    -moz-transition: margin 0.8s ease-out, width 0.8s ease-out, height 0.8s ease-out;
+    -ms-transition: margin 0.8s ease-out, width 0.8s ease-out, height 0.8s ease-out;
+    -o-transition: margin 0.8s ease-out, width 0.8s ease-out, height 0.8s ease-out;
+    transition: margin 0.8s ease-out, width 0.8s ease-out, height 0.8s ease-out; }
+    posts .posts-container .post {
+      height: 270px;
+      width: 270px;
+      display: inline-block;
+      margin-right: 15px;
+      float: none; }
+      posts .posts-container .post .artwork {
+        height: 270px;
+        width: 270px;
+        position: relative;
+        background-size: 100% 100%;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        border-radius: 30px; }
+        posts .posts-container .post .artwork .player-control {
+          width: 100px;
+          height: 100px;
+          -moz-opacity: 0;
+          -khtml-opacity: 0;
+          opacity: 0; }
+        posts .posts-container .post .artwork .player-control:hover {
+          -moz-opacity: 1;
+          -khtml-opacity: 1;
+          opacity: 1; }
+        posts .posts-container .post .artwork .post-hover {
+          -moz-opacity: 0.8;
+          -khtml-opacity: 0.8;
+          opacity: 0.8; }
+  posts .glyphicon {
+    float: left; }
+  posts .collapse-control-container {
+    margin: 0px auto;
+    width: 60px; }
+    posts .collapse-control-container .collapse-control {
+      height: 35px;
+      font-size: 22px;
+      text-indent: 15px;
+      padding: 0px;
+      border-radius: 20%;
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8;
+      opacity: 0.8; }
+  posts .collapse-control:hover {
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; }
+
 about {
   color: #ffffff;
   font-size: 22px;
   text-align: justify; }
-  about .container {
+  about .col-sm-8 {
     background-color: rgba(43, 40, 41, 0.85);
     border-radius: 25px;
     margin-top: 20px;
-    width: 950px; }
-    about .container .col-sm-12 {
-      padding: 25px 35px; }
-      about .container .col-sm-12 a {
-        color: #33B745; }
-      about .container .col-sm-12 a:hover {
-        color: #11771D; }
+    margin-bottom: 90px;
+    padding: 25px 35px; }
+    about .col-sm-8 a, about .col-sm-8 header h1 a:hover, header h1 about .col-sm-8 a:hover, about .col-sm-8 header h1 a:focus, header h1 about .col-sm-8 a:focus {
+      color: #33B745; }
+    about .col-sm-8 a:hover {
+      color: #11771D; }
 
 @font-face {
-  font-family: 'UniversLTStd47LightCondensed';
+  font-family: "UniversLTStd47LightCondensed";
   src: url("../fonts/universltstd-lightcn-webfont.svg"); }
-
 body {
   font-family: "UniversLTStd47LightCondensed", Helvetica, Arial, sans-serif;
   height: 100%;
@@ -280,3 +286,5 @@ body {
   float: none;
   text-align: center;
   margin-right: -4px; }
+
+/*# sourceMappingURL=base.css.map */

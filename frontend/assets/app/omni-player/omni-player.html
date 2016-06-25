@@ -40,7 +40,7 @@
                 </div>
                 <div class="player-controls-right">
                     <div class="volume-controls-container" ng-mouseleave="volumeHover = false">
-                        <div class="player-volume" ng-mouseenter="volumeHover = true">
+                        <div class="player-volume" ng-mouseenter="volumeHover = true" ng-click="volumeHover = !volumeHover">
                             <span class="glyphicon glyphicon-volume-up"></span>
                         </div>
                         <div class="volume-container" ng-class="volumeHover? 'open' : ''">
