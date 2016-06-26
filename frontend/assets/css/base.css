@@ -142,10 +142,10 @@ header {
   color: #ffffff;
   background-color: rgba(43, 40, 41, 0.75);
   padding-bottom: 10px; }
-  header .col-sm-2 {
-    padding-left: 0px; }
-  header .col-sm-5 {
+  header .title-container {
     padding: 0px; }
+  header .social-container {
+    padding-right: 0px; }
   header h1 a, header h1 a:hover, header h1 a:focus {
     color: #ffffff;
     font-size: 40px;
@@ -249,15 +249,15 @@ about {
   color: #ffffff;
   font-size: 22px;
   text-align: justify; }
-  about .col-sm-8 {
+  about .about-container {
     background-color: rgba(43, 40, 41, 0.85);
     border-radius: 25px;
     margin-top: 20px;
     margin-bottom: 90px;
     padding: 25px 35px; }
-    about .col-sm-8 a, about .col-sm-8 header h1 a:hover, header h1 about .col-sm-8 a:hover, about .col-sm-8 header h1 a:focus, header h1 about .col-sm-8 a:focus {
+    about .about-container a, about .about-container header h1 a:hover, header h1 about .about-container a:hover, about .about-container header h1 a:focus, header h1 about .about-container a:focus {
       color: #33B745; }
-    about .col-sm-8 a:hover {
+    about .about-container a:hover {
       color: #11771D; }
 
 @font-face {
