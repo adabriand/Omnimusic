@@ -3,7 +3,7 @@ Status](https://travis-ci.org/adabriand/omnimusic.svg?branch=master)](https://tr
 Omnimusic
 ==============================
 
-The Omnimusic (a/k/a Omni) was born at january 22, 2013 as a Tumblr page where our collaborators could share a mix of new/old songs of all genres in one place. The Omni's interface on its first year enabled visitors to discover songs through a radio player, search and by a carefully organized set of genre tags. Unfortunately, a digital rights owner has forbidden the stream of some songs and, consequently, the Tumblr had to take down the page.
+The [Omnimusic](https://omnimusic.herokuapp.com/) (a/k/a Omni) was born at january 22, 2013 as a Tumblr page where our collaborators could share a mix of new/old songs of all genres in one place. The Omni's interface on its first year enabled visitors to discover songs through a radio player, search and by a carefully organized set of genre tags. Unfortunately, a digital rights owner has forbidden the stream of some songs and, consequently, the Tumblr had to take down the page.
 
 One year later, we've decided to revive the project as a new and independent website with the same goals of the previous version. Furthermore, we've planned to add some playlists features to enhance the users' experience while they're discovering songs.
 
