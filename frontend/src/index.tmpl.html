@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Omnimusic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Omnimusic is a music blog that helps you to discover old and new songs of all genres in one place.">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- inject:js -->
+    <!-- endinject -->
+</head>
+
+<body ng-app="omnimusic" ng-controller="omnimusicCtrl" ng-class="isSongPlaying() ? 'animated-bg' : 'default-bg'">
+<header></header>
+<div ng-controller="postsCtrl">
+    <posts ng-show="showingPosts"></posts>
+    <omni-player ng-show="currentPlaying"></omni-player>
+    <youtube width="0" height="0" videoid="{{ currentPlayingYoutubeId }}" paused="{{ pausedPlayer }}"
+             ended="playEnded()" volume="{{ volumeHeight }}" play-progress="playProgress" seek-to="seekTo"
+    ></youtube>
+</div>
+<about ng-show="showingAbout"></about>
+</body>
+</html>

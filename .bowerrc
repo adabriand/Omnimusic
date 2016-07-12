@@ -1,0 +1,6 @@
+{
+  "directory" : "frontend/src/bower_components",
+  "ignoredDependencies": [
+    "jquery.kinetic"
+  ]
+}

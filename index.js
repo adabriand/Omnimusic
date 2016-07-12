@@ -1,9 +1,11 @@
-var express = require('express'); 
+var express = require('express');
 var app = express();
-app.use(express.static(__dirname + '/frontend'));
-
+var isDevMode = process.argv.length > 2 && process.argv[2] === '-d';
 var processPort = process.env.PORT || 3000;
 var processHost = process.env.HOST || 'localhost';
-app.listen(processPort, function() {
+var sourceFiles = isDevMode ? '/frontend/src' : '/frontend/dist';
+
+app.use(express.static(__dirname + sourceFiles));
+app.listen(processPort, function () {
     console.log('Server running on http://' + processHost + ':' + processPort);
 });

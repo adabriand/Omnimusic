@@ -1,0 +1,37 @@
+{
+  "name": "Omnimusic",
+  "description": "A website for music recommendation/discovery.",
+  "main": "index.js",
+  "authors": [
+    "Adabriand Furtado <adabriand@gmail.com>"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://github.com/adabriand/omnimusic",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.7",
+    "smooth-scroll": "smooth-div-scroll#*"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "smooth-scroll": {
+      "dependencies": {
+        "jquery-ui": "=1.10.4",
+        "jquery-mousewheel": "=3.1.4"
+      }
+    }
+  }
+}
